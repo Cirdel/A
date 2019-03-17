@@ -60,6 +60,11 @@
         }
     </script>
 </head>
+
+<body>
+<div id="timer"></div>
+</body>
+
 </html>
 </center>
 COMEON
