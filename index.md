@@ -64,7 +64,6 @@
 <body>
 <div id="timer"></div>
 </body>
-
 </html>
 </center>
-COMEON
+COMEONA
