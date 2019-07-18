@@ -1,3 +1,5 @@
+# <center>高考倒计时</center>
+## There is ONLY
 <center>
 <html>
 <head>
@@ -49,7 +51,7 @@
                     int_minute="0"+int_minute;
                 if(int_second<10)
                     int_second="0"+int_second;
-                str_time="There is ONLY<"+int_day+"d"+int_hour+"h"+int_minute+"min"+int_second+"s before the U/CEntrance examination>";
+                str_time=int_day+" d "+int_hour+" h "+int_minute+" min "+int_second+" s left";
                 timer.innerHTML=str_time;
                 setTimeout("show_time()",1000);
             }
@@ -60,7 +62,7 @@
         }
     </script>
 </head>
-
+## <center> Before The University/College entrance examination.</center>
 <body>
 <div id="timer"></div>
 </body>
