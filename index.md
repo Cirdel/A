@@ -62,10 +62,10 @@
         }
     </script>
 </head>
-## <center> Before The University/College entrance examination.</center>
 <body>
 <div id="timer"></div>
 </body>
 </html>
 </center>
-COMEONA
+##<center> Before The University/College entrance examination.</center>
+
