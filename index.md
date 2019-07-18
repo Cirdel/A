@@ -12,7 +12,7 @@
     <script type="text/javascript">
         var time_now_server,time_now_client,time_end,time_server_client;
  
-        time_end=new Date("2019/06/18 00:00:0");//结束的时间
+        time_end=new Date("2022/06/18 00:00:0");//结束的时间
         time_end=time_end.getTime();//获取的是毫秒
  
         time_now_server=new Date();//开始的时间
@@ -49,7 +49,7 @@
                     int_minute="0"+int_minute;
                 if(int_second<10)
                     int_second="0"+int_second;
-                str_time="离中考还剩<"+int_day+"天"+int_hour+"小时"+int_minute+"分钟"+int_second+"秒>";
+                str_time="There is ONLY<"+int_day+"d"+int_hour+"h"+int_minute+"min"+int_second+"s before the U/CEntrance examination>";
                 timer.innerHTML=str_time;
                 setTimeout("show_time()",1000);
             }
