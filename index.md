@@ -3,64 +3,31 @@
 <center>
 <html>
 <head>
-    <style type="text/css">
-        div{
-            font-size:20px;
-        }
-    </style>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <title>JS时间倒计时</title>
-    <script type="text/javascript">
-        var time_now_server,time_now_client,time_end,time_server_client;
- 
-        time_end=new Date("2022/06/18 00:00:0");//结束的时间
-        time_end=time_end.getTime();//获取的是毫秒
- 
-        time_now_server=new Date();//开始的时间
-        time_now_server=time_now_server.getTime();
-        setTimeout("show_time()",1000);
- 
-        function show_time()
-        {
-            var timer = document.getElementById("timer");
-            var hourid = document.getElementById("hour");
-            if(!timer){
-                return ;
-            }
-            timer.innerHTML =time_now_server;
- 
-            var time_now,time_distance,str_time;
-            var int_day,int_hour,int_minute,int_second;
-            var time_now=new Date();
-            time_now=time_now.getTime();
-            time_distance=time_end-time_now;
-            if(time_distance>0)
-            {
-                int_day=Math.floor(time_distance/86400000)
-                time_distance-=int_day*86400000;
-                int_hour=Math.floor(time_distance/3600000)
-                time_distance-=int_hour*3600000;
-                int_minute=Math.floor(time_distance/60000)
-                time_distance-=int_minute*60000;
-                int_second=Math.floor(time_distance/1000)
- 
-                if(int_hour < 10)
-                    int_hour="0"+int_hour;
-                if(int_minute<10)
-                    int_minute="0"+int_minute;
-                if(int_second<10)
-                    int_second="0"+int_second;
-                str_time=int_day+" d "+int_hour+" h "+int_minute+" min "+int_second+" s left";
-                timer.innerHTML=str_time;
-                setTimeout("show_time()",1000);
-            }
-            else
-            {
-                timer.innerHTML =0;
-            }
-        }
-    </script>
+    <div style="text-align:center;margin-top:100px;">
+    <span>距离2022年成人高考还有：</span>
+    <span id="t_d"></span>
+    <span id="t_h">00时</span>
+    <span id="t_m">00分</span>
+    <span id="t_s">00秒</span>
+</div>
+<script type="text/javascript">
+    function getRTime(){
+        var EndTime= new Date('2022/6/7 00:00:00'); //截止时间
+        var NowTime = new Date();
+        var t =EndTime.getTime() - NowTime.getTime();
+        
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+        
+        document.getElementById("t_d").innerHTML = d + "天";
+        document.getElementById("t_h").innerHTML = h + "时";
+        document.getElementById("t_m").innerHTML = m + "分";
+        document.getElementById("t_s").innerHTML = s + "秒";
+    }
+    setInterval(getRTime,1000);
+</script>
 </head>
 <body>
 <div id="timer"></div>
