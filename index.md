@@ -3,7 +3,7 @@
 <center>
 <html>
 <head>
-    <div style="text-align:center;margin-top:100px;">
+    <div style="text-align:center;margin-top:1000px;">
     <span>距离2022年成人高考还有：</span>
     <span id="t_d"></span>
     <span id="t_h">00时</span>
